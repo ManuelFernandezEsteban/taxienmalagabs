@@ -1,0 +1,195 @@
+
+  [
+    {
+      "lugar": "Malaga",
+      "id": 0,
+      "destinos": [
+        {
+          "id": 0,
+          "lugar": "Aeropuerto",
+          "precio": {
+            "cuatroPlazas":20,
+            "ochoPlazas":25
+          
+          }
+        },
+        {
+          "id": 1,
+          "lugar": "Torremolinos",
+          "precio": {
+            "cuatroPlazas":25,
+            "ochoPlazas":30
+          
+          }
+        },
+        {
+          "id": 2,
+          "lugar": "Benalmadena",
+          "precio": {
+            "cuatroPlazas":30,
+            "ochoPlazas":35
+          
+          }
+        },
+        {
+          "id": 3,
+          "lugar": "Marbella",
+          "precio": {
+            "cuatroPlazas":65,
+            "ochoPlazas":75
+          
+          }
+        },
+        {
+          "id": 4,
+          "lugar": "Fuengirola",
+          "precio": {
+            "cuatroPlazas":40,
+            "ochoPlazas":50
+          
+          }
+        },
+        {
+          "id": 5,
+          "lugar": "Puerto Banus",
+          "precio": {
+            "cuatroPlazas":70,
+            "ochoPlazas":80
+          
+          }
+        },
+        {
+          "id": 6,
+          "lugar": "Nerja",
+          "precio": {
+            "cuatroPlazas":70,
+            "ochoPlazas":80
+          
+          }
+        },
+        {
+          "id": 7,
+          "lugar": "Rincon de la Victoria",
+          "precio": {
+            "cuatroPlazas":40,
+            "ochoPlazas":50
+          
+          }
+        },
+        {
+          "id": 8,
+          "lugar": "Mijas Costa",
+          "precio": {
+            "cuatroPlazas":40,
+            "ochoPlazas":50
+          
+          }
+        },
+        {
+          "id": 9,
+          "lugar": "Antequera",
+          "precio": {
+            "cuatroPlazas":65,
+            "ochoPlazas":75
+          
+          }
+        }
+      ]
+    },
+    {
+      "lugar": "Aeropuerto",
+      "id": 1,
+      "destinos": [
+        {
+          "id": 0,
+          "lugar": "Puerto",
+          "precio": {
+            "cuatroPlazas":20,
+            "ochoPlazas":25
+          
+          }
+        },
+        {
+          "id": 1,
+          "lugar": "Torremolinos",
+          "precio": {
+            "cuatroPlazas":15,
+            "ochoPlazas":25
+          
+          }
+        },
+        {
+          "id": 2,
+          "lugar": "Benalmadena",
+          "precio": {
+            "cuatroPlazas":25,
+            "ochoPlazas":35
+          
+          }
+        },
+        {
+          "id": 3,
+          "lugar": "Marbella",
+          "precio": {
+            "cuatroPlazas":60,
+            "ochoPlazas":70
+          
+          }
+        },
+        {
+          "id": 4,
+          "lugar": "Fuengirola",
+          "precio": {
+            "cuatroPlazas":35,
+            "ochoPlazas":45
+          
+          }
+        },
+        {
+          "id": 5,
+          "lugar": "Puerto Banus",
+          "precio": {
+            "cuatroPlazas":65,
+            "ochoPlazas":75
+          
+          }
+        },
+        {
+          "id": 6,
+          "lugar": "Nerja",
+          "precio": {
+            "cuatroPlazas":75,
+            "ochoPlazas":85
+          
+          }
+        },
+        {
+          "id": 7,
+          "lugar": "Rincon de la Victoria",
+          "precio": {
+            "cuatroPlazas":45,
+            "ochoPlazas":55
+          
+          }
+        },
+        {
+          "id": 8,
+          "lugar": "Mijas Costa",
+          "precio": {
+            "cuatroPlazas":35,
+            "ochoPlazas":45
+          
+          }
+        },
+        {
+          "id": 9,
+          "lugar": "Antequera",
+          "precio": {
+            "cuatroPlazas":65,
+            "ochoPlazas":75
+          
+          }
+        }
+      ]
+    }
+  ]

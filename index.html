@@ -8,6 +8,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Taxi en Málaga | Taxi en Aeropuerto</title>
 </head>
@@ -16,12 +17,12 @@
     <!--header-->
 
     <header>
-        <nav class="navbar sticky-top navbar-expand-lg bg-light">
+        <nav class="navbar fixed-top navbar-expand-lg text-color-white">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
-                        <a class="navbar-brand font-title" href="#">Taxi en Málaga</a>
-                        <span>640-224-381</span>
+                        <a class="navbar-brand ff-title text-color-white" href="#">Taxi en Málaga</a>
+                        <span><i class="bi bi-telephone"></i>640-224-381</span>
                     </div>
 
                 </div>
@@ -31,25 +32,25 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse extremo" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link text-color-white active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Traslados</a>
+                            <a class="nav-link text-color-white" href="./traslados.html">Traslados</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Visitas</a>
+                            <a class="nav-link text-color-white" href="#">Visitas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link text-color-white" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link text-color-white" href="#">Contacto</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-color-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Idioma
                             </a>
                             <ul class="dropdown-menu">
@@ -65,62 +66,138 @@
         </nav>
 
     </header>
-    <main>
-        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="./assets/images/fondo-malaga.jpg" class="d-block w-100" alt="fondo Málaga">
-                    <div class="carousel-caption d-none d-md-block text-dark">
-                        <h5 class="font-title ">Aeropuerto de Málaga</h5>
-                        <p class="font-text">Su servicio de taxi en Málaga y provincia. Taxis, reservas y traslados a partir de y con de destino al Aeropuerto de Málaga-Costa del Sol (AGP)</p>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./assets/images/flamencos.jpg" class="d-block w-100" alt="flamencos">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="font-title">Puerto marítimo de Málaga</h5>
-                        <p class="font-text">Reserve con antelación y evite prisas, colas y perdidas de tiempo. Nos adaptamos a todas sus necesidades y deseos de transporte.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/cathedral-Malaga.jpg" class="d-block w-100" alt="catedral Málaga">
-                    <div class="carousel-caption d-none d-md-block text-dark">
-                        <h5 class="font-title">Estación de tren AVE María Zambrano</h5>
-                        <p class="font-text">Le ofercemos un sistema de reservas de taxi Málaga eficiente, puntual y comprometido con la máxima calidad de servicio.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <aside class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h2>TRASLADOS AEROPUERTO</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body">
+            <div class="row">
+                <div class="col">
+                    <nav>
+                        <ul id="traslados">
+                            
+                        </ul>
+                    </nav>
 
-        <div class="card text-bg-dark" id="JumboTronMovil">
-            <img src="./assets/images/marbella.jpg" class="card-img" alt="marbella">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Taxi en Málaga</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
             </div>
         </div>
+    </aside>
+    <main>
+
+
+        <section class="bienvenida">
+            <div class="row">
+                <div class="col">
+                    <img class="image" src="./assets/images/fondo-malaga.jpg" alt="Malaga">
+                    <div class="overlay">
+                        <h1 class="ff-title text-color-light fs-700">
+                            Taxi en Málaga
+                        </h1>
+                        <p class="">
+                            La mejor y más barata opción de transporte para moverse por la ciudad.
+                        </p>
+                        <ul class="home-ul">
+                            <li>
+                                <p class="ff-title"><i class="bi bi-airplane"></i> Aeropuerto de Málaga</p>
+                            </li>
+                            <li>
+                                <p class="ff-title">Puerto marítimo de Málaga</p>
+                            </li>
+                            <li>
+                                <p class="ff-title"><i class="bi bi-train-front"></i> Estación de tren AVE María
+                                    Zambrano</p>
+                            </li>
+                        </ul>
+                        <h2 class="ff-title"><i class="bi bi-telephone"></i>
+                            640-224-381
+                        </h2>
+                        <button type="button" class="btn btn-custom-primary btn-lg text-color-white">Reservar</button>
+                        <button onclick="dibujarTraslados()" class="btn btn-custom-primary btn-lg text-color-white"
+                            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                            aria-controls="offcanvasWithBothOptions">Traslados más comunes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bienvenidos">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 col-xs-12">
+                    <h2 class="ff-title text-color-dark fs-600">Bienvenidos a Taxi en Málaga</h2>
+                    <p class="text-color-medium lh-normal">
+                        Su servicio de taxi en Málaga y provincia. Taxis, reservas y traslados a partir de y con de
+                        destino al
+                        Aeropuerto de Málaga-Costa del Sol (AGP), Puerto de Málaga, Estación de tren AVE María Zambrano
+                        (VIALIA)
+                        y a toda la influencia de la ciudad de Málaga. Reserve con antelación y evite prisas, colas y
+                        perdidas
+                        de tiempo. Nos adaptamos a todas sus necesidades y deseos de transporte. Le ofercemos un sistema
+                        de
+                        reservas de taxi Málaga eficiente, puntual y comprometido con la máxima calidad de servicio.
+                        Trabajamos
+                        24 horas al día, 7 días a la semana y prestamos nuestro servicio de taxi a ciudadanos
+                        particulares,
+                        empresas y entidades de la ciudad de Málaga.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-xs-12 text-center ff-title text-color-dark fs-600">
+                    <div class="row">
+                        <span>Es local</span>
+                    </div>
+                    <div class="row">
+                        <span>Es de confianza</span>
+                    </div>
+                    <div class="row">
+                        <span>Es seguro</span>
+                    </div>
+                    <div class="row">
+                        <span>Es de Málaga</span>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            </div>
+
+        </section>
     </main>
 
+
+    <footer class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+
+            <span class="text-color-white">&copy; 2022 Manuel Fernández Esteban</span>
+
+            <ul class="list-unstyled d-flex ">
+                <li class="ms-3"><a class="text-color-white" href="#"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li class="ms-3"><a class="text-color-white" href="#"><i class="bi bi-twitter"></i></a></li>
+                <li class="ms-3"><a class="text-color-white" href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 text-color-white">
+            <p>Donde su dinero le lleva más lejos</p>
+            <p>Taxi en Aeropuerto de Málaga</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+            <ul class="nav col">
+                <li class="nav-item mb-2 ms-2"><a href="#" class="nav-link p-0 text-color-white">Política de
+                        privacidad</a></li>
+                <li class="nav-item mb-2 ms-2"><a href="#" class="nav-link p-0 text-color-white">Aviso legal</a>
+                </li>
+                <li class="nav-item mb-2 ms-2"><a href="#" class="nav-link p-0 text-color-white">Política de
+                        cookies</a></li>
+            </ul>
+        </div>
+
+
+    </footer>
 
 
 
