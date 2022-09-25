@@ -230,8 +230,16 @@ footer, nav {
   padding-bottom: 20px;
 }
 
-form {
+form, section {
   padding: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--clr-light);
 }
 
 /*# sourceMappingURL=style.css.map */

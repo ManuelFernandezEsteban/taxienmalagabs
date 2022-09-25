@@ -73,66 +73,61 @@
 
       <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="origen" class="form-label bold ff-title lt-spacing-1">Recogida</label>
-        <div class="input-group has-validation">
+        <div class="input-group">
           <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-geo"></i></span>
           <select class="form-select ff-text" aria-label="Direccion de recogida" name="origen" id="origen">
             <option class="ff-text" value="-1">Origen</option>
           </select>
-          <div class="invalid-feedback">
-
-          </div>
         </div>
+        <span id="msgErrorRecogida" class="ff-text text-color-red fs-300">
+        </span>
       </div>
 
       <div class="col-md-4 col-lg-4 col-xl-4">
         <label for="destino" class="form-label bold ff-title lt-spacing-1">Destino</label>
-        <div class="input-group has-validation">
+        <div class="input-group">
           <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-geo-fill"></i></span>
           <select class="form-select ff-text" aria-label="Direccion de destino" name="destino" id="destino">
             <option class="ff-text" value="-1">Destino</option>
           </select>
-          <div class="invalid-feedback">
-
-          </div>
         </div>
+        <span id="msgErrorDestino" class="ff-text text-color-red fs-300">
+        </span>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2 col-xs-6">
         <label for="pax" class="form-label bold ff-title lt-spacing-1">Pax</label>
-        <div class="input-group has-validation">
-          <input type="number" class="form-control" name="pax" id="pax" min="1" max="8" placeholder="1" required>
-          
-          <div class="invalid-feedback">
-
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <label for="precio" class="form-label bold ff-title lt-spacing-1">Precio</label>
         <div class="input-group">
-          <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-currency-euro"></i></span>
-          <input type="text" class="form-control ff-text" name="precio" id="precio" aria-describedby="inputGroupPrepend" placeholder="€" value="" readonly>
-
+          <input type="number" class="form-control" value="1" name="pax" id="pax" min="1" max="8" placeholder="1"
+            required>
         </div>
+        <span id="paxSpan" class="ff-text text-color-red fs-300">
+        </span>
+      </div>
+
+      <div class="col-md-2 col-xs-6">
+        <label for="vuelo" class="form-label bold ff-title lt-spacing-1">Vuelo</label>
+        <input type="text" class="form-control ff-text" id="vuelo" name="vuelo" placeholder="BY12345">
       </div>
 
       <div class="col-md-4">
         <label for="name" class="form-label bold ff-title lt-spacing-1">Nombre y apellidos</label>
-        <input type="text" class="form-control ff-text" id="name" name="name" placeholder="Manuel Fernández" required>
-        <div class="invalid-feedback">
-
+        <div class="input-group">
+          <input type="text" class="form-control ff-text" id="name" name="name" placeholder="Manuel Fernández" required>
         </div>
+        <span id="msgErrorName" class="ff-text text-color-red fs-300">
+        </span>
       </div>
 
       <div class="col-md-4">
         <label for="email" class="form-label bold ff-title lt-spacing-1">Email</label>
         <div class="input-group has-validation">
           <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
-          <input type="email" class="form-control ff-text" name="email" id="email" email placeholder="manuel@mail.com" aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
+          <input type="email" class="form-control ff-text" name="email" id="email" email placeholder="manuel@mail.com"
+            aria-describedby="inputGroupPrepend" required>
 
-          </div>
         </div>
-
+        <span id="msgErrorEmail" class="ff-text text-color-red fs-300">
+        </span>
       </div>
 
       <div class="col-md-4">
@@ -141,10 +136,10 @@
           <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-telephone"></i></span>
           <input type="text" class="form-control ff-text" id="phone" name="phone" aria-describedby="inputGroupPrepend"
             placeholder="612345678" required>
-          <div class="invalid-feedback">
 
-          </div>
         </div>
+        <span id="msgErrorPhone" class="ff-text text-color-red fs-300">
+        </span>
       </div>
       <div class="col-md-4">
         <label for="fecha" class="form-label bold ff-title lt-spacing-1">Fecha</label>
@@ -152,47 +147,149 @@
           <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-calendar"></i></span>
           <input type="date" class="form-control ff-text" id="fecha" name="fecha" aria-describedby="inputGroupPrepend"
             required>
-          <div class="invalid-feedback">
 
-          </div>
         </div>
+        <span id="msgErrorDate" class="ff-text text-color-red fs-300">
+        </span>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-3">
         <label for="hora" class="form-label bold ff-title lt-spacing-1">Hora</label>
         <div class="input-group has-validation">
           <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-clock"></i></span>
           <input type="time" class="form-control ff-text" id="hora" name="hora" aria-describedby="inputGroupPrepend"
             placeholder="612345678" required>
-          <div class="invalid-feedback">
 
-          </div>
         </div>
+        <span id="msgErrorTime" class="ff-text text-color-red fs-300">
+        </span>
       </div>
 
-      <div class="col-md-4">
-        <label for="observaciones" class="form-label bold ff-title lt-spacing-1">Observaciones</label>        
-        <input type="text" class="form-control ff-text" id="observaciones" name="observaciones" aria-describedby="inputGroupPrepend">
+      <div class="col-md-5">
+        <label for="observaciones" class="form-label bold ff-title lt-spacing-1">Observaciones</label>
+        <input type="text" class="form-control ff-text" id="observaciones" name="observaciones"
+          aria-describedby="inputGroupPrepend">
       </div>
 
       <div class="col-12">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="conditions" required>
+          <input class="form-check-input" type="checkbox" value="conditions" id="conditions">
           <label class="form-check-label" for="conditions">
             Acepto las condiciones
           </label>
-          <div class="invalid-feedback">
-            Debes aceptar las condiciones antes de aceptar.
-          </div>
+          <span id="privacySpan" class="ff-text text-color-red fs-300">
+          </span>
         </div>
       </div>
-      <div class="col-12">
-        <button class="btn btn-custom-primary" type="button">Reservar</button>
+      <div class="row align-items-end">
+        <div class="col-4">
+          <label for="precio" class="form-label bold ff-title lt-spacing-1">Precio</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-currency-euro"></i></span>
+            <input type="text" class="form-control ff-text bold text-color-red" name="precio" id="precio"
+              aria-describedby="inputGroupPrepend" placeholder="€" value="" readonly>
+
+          </div>
+        </div>
+        <div class="col-8 ">
+          <button class="btn btn-custom-primary" id="btnConfirmarReserva" type="button">Reservar</button>
+        </div>
       </div>
+
     </form>
+
+    <section class="row g-3">
+
+      
+        <h3 class="ff-title text-color-dark fs-600">
+          TaxiEnMálaga
+        </h3>
+        <div class="card col-md-4 mt-3">
+          <div class="card-body">
+            <h5 class="card-title ff-title fs-400 text-color-medium lt-spacing-1">Traslados Aeropuerto, Puerto, Ave,
+              Estaciones</h5>
+            <p class="card-text fs-300 ff-text text-color-medium">Ofrecemos servicios de taxi en Málaga, traslados y
+              recogidas al
+              Aeropuerto de Málaga (AGP), Puerto, Estación de tren AVE María Zambrano (VIALIA). Le estaremos esperando
+              en la zona de llegadas.</p>
+          </div>
+        </div>
+        <div class="card col-md-4 mt-3 ">
+          <div class="card-body">
+            <h5 class="card-title ff-title fs-400 text-color-medium lt-spacing-1">Servicios a empresas, Instituciones y
+              Hoteles</h5>
+            <p class="card-text fs-300 ff-text text-color-medium">Ofrecemos servicios de taxi privados para empresas,
+              traslados de
+              directivos, empleados, para hoteles, congresos, eventos, fiestas y reuniones, con condiciones y
+              descuentos especiales.</p>
+          </div>
+        </div>
+        <div class="card col-md-4 mt-3">
+          <div class="card-body">
+            <h5 class="card-title ff-title fs-400 text-color-medium lt-spacing-1">Visitas turísticas y guiadas,
+              excursiones</h5>
+            <p class="card-text fs-300 ff-text text-color-medium">Ofrecemos servicios privados y personalizados de taxi
+              para
+              Málaga y el área metropolitana de Málaga. Establezca la ruta que desea realizar y nosotros le
+              garantizamos un viaje ameno y seguro.</p>
+          </div>
+        </div>  
+
+    </section>
+
+    <section class="row g-3">
+
+      
+      <h3 class="ff-title text-color-dark fs-600">
+        ¿Porqué utilizar TaxiEnMálaga para sus desplazamientos en Málaga?
+      </h3>
+      <div class="card col-md-6 col-lg-3 mt-3">
+        
+        
+        <div class="card-body">
+          <h5 class="card-tittle ff-title fs-400 text-color-medium lt-spacing-1">
+            Disponibilidad y seguridad
+          </h5>
+          <p class="card-text fs-300 ff-text text-color-medium">El objetivo de TaxiEnMálaga es la satisfacción de nuestros
+            clientes, <span class="bold">para ello trabajamos las 24 horas del día 7 días a la semana</span> en el
+            servicio de taxi. Garantizamos las recogidas y traslados a tiempo en Málaga y en el Aeropuerto de
+            Málaga.</p>
+        </div>
+      </div>
+      <div class="card col-md-6 col-lg-3 mt-3 ">
+        <div class="card-body">
+          <h5 class="card-title ff-title fs-400 text-color-medium lt-spacing-1">Asequible fiable y rápido</h5>
+          <p class="card-text fs-300 ff-text text-color-medium">Los precios de TaxiEnMálaga están aprobados por el área de
+            movilidad Oficina Municipal del Taxi del Ayuntamiento de Málaga. No tiene letra pequeña y disponemos
+            para su comodidad de la <span class="bold">opción de pago con tarjeta de crédito.</p>
+        </div>
+      </div>
+      <div class="card col-md-6 col-lg-3 mt-3">
+        <div class="card-body">
+          <h5 class="card-title ff-title fs-400 text-color-medium lt-spacing-1">Profesionalidad y comodidad</h5>
+          <p class="card-text fs-300 ff-text text-color-medium">La experiencia de los conductores de TaxiEnMálaga <span
+            class="bold">garantizan la comodidad de nuestros clientes</span> en el servicio de taxi en Málaga.
+        Nos esforzamos para ofrecerle el mejor traslado y el mejor trato.</p>
+        </div>
+      </div>
+      <div class="card col-md-6 col-lg-3 mt-3">
+        <div class="card-body">
+          <h5 class="card-title ff-title fs-400 text-color-medium lt-spacing-1">Es local, es seguro, es de Málaga</h5>
+          <p class="card-text fs-300 ff-text text-color-medium">TaxiEnMálaga es una empresa local y comprometida con su
+            objetivo, ubicada en el centro de la ciudad, viviendo en el centro de Málaga. Disfrute del mejor y mas
+            barato servicio de transporte y taxi en Málaga.</p>
+        </div>
+      </div>
+
+
+
+
+
+  </section>
+
   </main>
 
-  <footer class="row">
+  <footer class="row mt-5">
 
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
 
@@ -212,11 +309,11 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
       <ul class="nav col">
-        <li class="nav-item mb-2 ms-2"><a href="#" class="nav-link p-0 text-color-white">Política de
+        <li class="nav-item mb-2 ms-2"><a href="#" class="p-0 text-color-white">Política de
             privacidad</a></li>
-        <li class="nav-item mb-2 ms-2"><a href="#" class="nav-link p-0 text-color-white">Aviso legal</a>
+        <li class="nav-item mb-2 ms-2"><a href="#" class=" p-0 text-color-white">Aviso legal</a>
         </li>
-        <li class="nav-item mb-2 ms-2"><a href="#" class="nav-link p-0 text-color-white">Política de
+        <li class="nav-item mb-2 ms-2"><a href="#" class="p-0 text-color-white">Política de
             cookies</a></li>
       </ul>
     </div>
@@ -232,7 +329,8 @@
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
   <!--Custom JS-->
-<script src="./assets/js/traslados.js"></script>
+  <script src="./assets/js/traslados.js"></script>
+  <script src="./assets/js/validation-form.js"></script>
 </body>
 
 </html>

@@ -36,6 +36,18 @@ class SelectOrigen extends Sujeto{
         this.notify(this.data);
     }
 }
+
+class PaxNumber extends Sujeto{
+    constructor(){
+        super();
+        this.data=1;
+    }
+    add(item){
+        this.data=item;
+        this.notify(this.data);
+    }
+}
+
 class Observer{
     constructor(fn){
         this.fn=fn;
@@ -55,6 +67,7 @@ let indexOrigen=-1;
 
 const observerDestino = new Observer((opcion)=>{
     borrarOptions(destino); 
+    actualizarPrecio(-1,-1);
     populateSelect(destino,listaOrigenes[opcion].destinos);
 });
 
@@ -64,15 +77,38 @@ const observerPrecio = new Observer((opcion)=>{
 selectO.subscribe(observerDestino);
 selectD.subscribe(observerPrecio);
 
+pax.addEventListener('keydown',(event)=>{
+    if (isNaN(event.key)){
+        event.preventDefault()
+        return;
+    }
+})
+
+pax.addEventListener('change',(event)=>{  
+
+    if(event.target.value>8||event.target.value<1){
+        event.preventDefault();
+        return;
+    }
+
+    actualizarPrecio(indexOrigen,indexDestino);
+})
+
 function actualizarPrecio(origen,destino){
+   
     precio.value='';
     if (origen<0||destino<0){
         precio.value='0';
 
     }else{
         precio.value='';
-        const valor = matrizPrecios[origen][destino].cuatroPlazas;
-        console.log(valor)
+        let valor = 0;
+        if (pax.value<=4){
+            valor = matrizPrecios[origen][destino].cuatroPlazas;
+        }else{
+            valor = matrizPrecios[origen][destino].ochoPlazas;
+        }        
+
         precio.value=`${valor}`
       
     }
@@ -130,9 +166,9 @@ function  getParametros(){
 
 async function crearMatriz(listaOrigenes){
     
-    let i=0;
+
     listaOrigenes.forEach(origen => {
-        let j =0;        
+        
         let listaDestinos=[];
         origen.destinos.forEach(destino => {            
             listaDestinos.push(destino.precio);  
@@ -141,12 +177,28 @@ async function crearMatriz(listaOrigenes){
     });       
 }
 
+const asignarTraslado=(traslado)=>{
+
+    if (isNaN(traslado.paramDestino)||isNaN(traslado.paramOrigen)){
+        return;
+    }else{
+        indexDestino=traslado.paramDestino;
+        indexOrigen=traslado.paramOrigen
+        origen.value=indexOrigen;
+        borrarOptions(destino);         
+        populateSelect(destino,listaOrigenes[indexOrigen].destinos); 
+        destino.value=indexDestino;   
+        actualizarPrecio(indexOrigen,indexDestino);
+    }
+
+}
+
 
 const init = async ()=>{
 
-    const traslados  = getParametros();
     listaOrigenes= await getLista(url);
     crearMatriz(listaOrigenes);
     populateSelect(origen,listaOrigenes)
-    
+    const traslado  = getParametros();    
+    asignarTraslado(traslado);
 }
