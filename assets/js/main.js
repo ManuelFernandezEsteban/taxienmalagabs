@@ -59,3 +59,9 @@ const creaTraslado= (destino,lugar)=>{
     
     li.appendChild(anchor);
 }
+
+
+aprivacidad.addEventListener('click',()=>{
+    const modal = new bootstrap.Modal('#modalPoliticaDePrivacidad',{});
+    modal.show(modal);
+})

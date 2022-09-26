@@ -168,6 +168,11 @@ btnConfirmarReserva.addEventListener('click', (event) => {
 
         //    formReserva.submit()
         formReserva.reset();
+
+        const modal = new bootstrap.Modal('#modalReservaCorrecta',{});
+        modal.show(modal);
+
+
         precio.value = 0;
 
     }

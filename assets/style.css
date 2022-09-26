@@ -242,4 +242,8 @@ a:hover {
   color: var(--clr-light);
 }
 
+.block {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
